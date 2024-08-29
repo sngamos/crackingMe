@@ -2,5 +2,5 @@
 
 ## Code breakdown  
 
-Replacing main function:  
+1. Replacing main function:  
 replace `ulong main(void)` --> `int main(void)`
