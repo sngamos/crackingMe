@@ -1,7 +1,8 @@
 # Amos' solution for revv
 
 ## Answer  
-`ACTF{N01ce_R3v3r51^g}`
+`ACTF{N01ce_R3v3r51^g}`  
+
 ## Preliminary checks  
 
 1. First we can poke the file to check its behaviour using the `file revv` command.  
