@@ -2,6 +2,7 @@
 
 ## Answer  
 See LevelsByMacaroni841.py for functions to generate 1st and 2nd key pairs.  
+See LevelsByMacaroni841_patched for patched binary file.
 
 ## Preliminary checks  
 1. First we can run the command `file LevelsByMacaroni841` and observe that the binary file is **not stripped**, hence we can use ghidra to decompile the file and examine its code.  
@@ -17,10 +18,15 @@ See LevelsByMacaroni841.py for functions to generate 1st and 2nd key pairs.
 > `local_78` --> `2nd-string`  
 > `local_14` --> `2nd_string_length`
 > `local_c` --> `index`  
-> 
 
 3. We also see that we need the string be something like `34xxxx`, a 5 character long string starting with `34`.  
 > **Note**: although the decompiled code says 6 but we must take into account the presence of a NULL Terminator character.
 4. Our 2nd string needs to have the same length as the first string, i.e 6 char long.  
 5.  There is a for loop that iterates over all characters in the 2nd string and -48 from its ASCII encoding number. Then compares it to the first string's corresponding index character, -48 from this character, then mutiply by 2 the output of the subtraction.  
-6. continue with bonus solve tmr
+
+## Patching  
+To break into the bonus part, some patching is required.  
+We can do this using ghidra, and change the line `dword ptr [RBP + -0x8], 0x1b39` --> `dword ptr [RBP + -0x8], 0x6`.  
+Then use the savePatch.py script to export the patched file.  
+> ghidra_SavePatch github repo: `https://github.com/schlafwandler/ghidra_SavePatch`
+
