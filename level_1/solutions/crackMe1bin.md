@@ -17,7 +17,7 @@ We go ahead to use ghidra to decompile the file and examine the code.
 > explanation for why `local_c` is 5 and `local_10` is 7 later.
 
 3. We notice that we need to know what is the value of `local_c` and `local_10` in order to compute value of `pw_string`. We can go back to `systemv` function and observe the **Listing** window.
->         001009d4 c7 45 fc        MOV        dword ptr [RBP + local_c],0x5
+         001009d4 c7 45 fc        MOV        dword ptr [RBP + local_c],0x5
                  05 00 00 00
         001009db c7 45 f8        MOV        dword ptr [RBP + local_10],0x7
                  07 00 00 00
