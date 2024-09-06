@@ -21,5 +21,5 @@ We go ahead to use ghidra to decompile the file and examine the code.
 >        001009e2 c7 45 f4        MOV        dword ptr [RBP + local_14],0x1f5
 >                 f5 01 00 00  
 4. From above we can see that value of `0x5` >> `local_c` and `0x7` >> `local_10`. Now that we know the values of `local_c` and `local_10` we can compute the value of `pw_string`.  
-5. `pw_string` = (`local_c` * `local_10`) * `0x2d` = 540
+5. `pw_string` = (`local_c` + `local_10`) * `0x2d` = 540
 
