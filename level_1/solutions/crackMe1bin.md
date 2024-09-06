@@ -1,7 +1,7 @@
 # Amos' solution to crackMe1.bin file  
 
 ## Answer  
-540
+`540`
 ## Preliminary analysis  
 We can use `file crackMe1.bin` command to check the binary of the file, and observe that the binary of this file is **not stripped**.  
 We go ahead to use ghidra to decompile the file and examine the code.  
